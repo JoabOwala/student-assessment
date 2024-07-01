@@ -1,13 +1,13 @@
 // src/components/ViewParticipants.js
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './ViewParticipants.css'; // Import your CSS file
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Participants.css"; // Import consolidated CSS file
 
 function ViewParticipants() {
-  const [level, setLevel] = useState('');
-  const [classLevel, setClassLevel] = useState('');
-  const [examYear, setExamYear] = useState('');
-  const [term, setTerm] = useState('');
+  const [level, setLevel] = useState("");
+  const [classLevel, setClassLevel] = useState("");
+  const [examYear, setExamYear] = useState("");
+  const [term, setTerm] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,10 +16,14 @@ function ViewParticipants() {
   };
 
   return (
-    <div className="view-participants-container"> {/* Apply container class */}
+    <div className="participants-container">
       <h1>View Participants</h1>
       <form onSubmit={handleSubmit}>
-        <select className="form-control" value={level} onChange={(e) => setLevel(e.target.value)}>
+        <select
+          className="form-control"
+          value={level}
+          onChange={(e) => setLevel(e.target.value)}
+        >
           <option value="">Select Level</option>
           <option value="primary">Primary</option>
           <option value="secondary">Secondary</option>
@@ -46,10 +50,12 @@ function ViewParticipants() {
           value={term}
           onChange={(e) => setTerm(e.target.value)}
         />
-        <button type="submit" className="submit-button">Submit</button> {/* Apply button class */}
+        <button type="submit" className="submit-button">
+          View
+        </button>
       </form>
-      <Link to="/" className="back-button">
-      <button className="btn btn-secondary btn-back">Back to Home</button>
+      <Link to="/" className="btn btn-secondary btn-back">
+        Back to Home
       </Link>
     </div>
   );

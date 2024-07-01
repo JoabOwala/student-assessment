@@ -1,7 +1,7 @@
 // src/components/AddParticipants.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./AddParticipants.css";
+import "./Participants.css"; // Import consolidated CSS file
 
 function AddParticipants() {
   const [ke, setKe] = useState("");
@@ -16,7 +16,7 @@ function AddParticipants() {
   };
 
   return (
-    <div className="container add-participants-container">
+    <div className="participants-container">
       <h1>Add Participants</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -33,7 +33,11 @@ function AddParticipants() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <select className="form-control" value={level} onChange={(e) => setLevel(e.target.value)}>
+        <select
+          className="form-control"
+          value={level}
+          onChange={(e) => setLevel(e.target.value)}
+        >
           <option value="">Select Level</option>
           <option value="elementary">Elementary</option>
           <option value="primary">Primary</option>
@@ -48,10 +52,12 @@ function AddParticipants() {
           value={age}
           onChange={(e) => setAge(e.target.value)}
         />
-        <button type="submit" className="btn btn-primary">Add</button>
+        <button type="submit" className="btn-primary submit-button">
+          Add
+        </button>
       </form>
-      <Link to="/">
-        <button className="btn btn-secondary btn-back">Back to Home</button>
+      <Link to="/" className="btn btn-secondary btn-back">
+        Back to Home
       </Link>
     </div>
   );
