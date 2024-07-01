@@ -1,0 +1,33 @@
+/* src/components/AddParticipants.css */
+.add-participants-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .add-participants-container h1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .add-participants-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-participants-container form .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .add-participants-container form .btn {
+    align-self: center;
+  }
+  
+  .add-participants-container .btn-back {
+    margin-top: 20px;
+    align-self: center;
+  }
+  

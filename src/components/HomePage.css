@@ -1,0 +1,20 @@
+/* src/components/HomePage.css */
+.home-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .home-container h1 {
+    margin-bottom: 30px;
+  }
+  
+  .home-container .btn {
+    margin: 10px;
+  }
+  
